@@ -5,15 +5,6 @@ body {
   scroll-behavior: smooth;
   font-family: "Futura_Bk", sans-serif;
   --theme-color: #6c0ce9;
-  overflow: hidden;
-  height: 100%;
-  -webkit-font-smoothing: antialiased;
-}
-
-@media (max-width: 600px) {
-  body {
-    height: calc(var(--vh, 1vh) * 100);
-  }
 }
 
 * {
@@ -47,51 +38,6 @@ a {
 @tailwind components;
 @tailwind utilities;
 
-/* Disable ScrollBar */
-main::-webkit-scrollbar {
-  display: none;
-}
-
-/* 4 line |||| */
-.line_active {
-  height: 100%;
-}
-
-/* SCROLLDOWN TEXT */
-.scrolldown {
-  writing-mode: vertical-rl;
-  --webkit-writing-mode: vertical-rl;
-  transform: translate(0, 200px);
-}
-.scrolldown::after {
-  content: "";
-  height: 45px;
-  background-color: white;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto 5.5px auto auto;
-  bottom: -50px;
-}
-.scrolldown_active {
-  transform: translate(0, 0);
-}
-
-/*Section Text Slider */
-.text_slider {
-  transform: translateX(5px);
-}
-
-/* Image Slider */
-.imageslider {
-  transform: scale(0.9);
-  transition: transform 0.9s ease-out;
-}
-
-.image_slider {
-  transform: scale(1);
-}
-
 /* Hamburger Line Active Class */
 .hamb_line1_active {
   transform: rotate(45deg) translate(6px, 5px);
@@ -114,25 +60,19 @@ h1 {
 
 /* 01 Numbers */
 .counting {
-  font-family: "Abril Fatface", cursive;
-}
-
-/* 2nd Pages */
-.work2cont_slide {
-  transform: translateX(0);
-}
-.about2cont_slide {
-  transform: translateX(0);
+  font-family: "Abril Fatface", sans-serif;
 }
 
 /* All Works Items Fade In Class */
 .fade {
   transition: all 0.5s;
   transform: translateY(2rem);
+  opacity: 0;
 }
 
 .fade_in {
   transform: translateY(0);
+  opacity: 1;
 }
 
 /* Passion For Items Fade In Class */
@@ -147,7 +87,9 @@ h1 {
   opacity: 1;
 }
 
-.moon_slide {
-  transform: translateX(200%);
+.fill_white {
+  fill: #fff;
 }
-
+.bg_white {
+  background: #fff;
+}
